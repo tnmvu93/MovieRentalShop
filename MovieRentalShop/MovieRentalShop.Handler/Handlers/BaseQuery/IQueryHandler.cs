@@ -1,10 +1,8 @@
 ﻿
 namespace MovieRentalShop.Handler.Handlers.BaseQuery
 {
-    public interface IQueryHandler<TInt, TOut>
+    public interface IQueryHandler<TIntput, TOutput> where TIntput : IQuery where TOutput : IQueryResponse
     {
-        TOut Handle<TInt, TOut>(TInt query)
-            where TInt : IQuery
-            where TOut : IQueryResponse;
+        TOutput Handle(TIntput query);
     }
 }

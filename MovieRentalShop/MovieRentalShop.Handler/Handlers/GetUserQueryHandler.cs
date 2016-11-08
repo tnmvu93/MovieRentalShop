@@ -6,10 +6,7 @@ namespace MovieRentalShop.Handler.Handlers
 {
     public class GetUserQueryHandler : IQueryHandler<GetUserQuery, GetUserQueryResponse>
     {
-
-        public TOut Handle<TInt, TOut>(TInt query)
-            where TInt : IQuery
-            where TOut : IQueryResponse
+        public GetUserQueryResponse Handle(GetUserQuery query)
         {
             throw new System.NotImplementedException();
         }
