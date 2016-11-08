@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MovieRentalShop.Handler.Entity
+namespace MovieRentalShop.Handler.Entities
 {
     public class User : BaseClass
     {

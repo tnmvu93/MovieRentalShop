@@ -1,4 +1,4 @@
-﻿using MovieRentalShop.Handler.Entity;
+﻿using MovieRentalShop.Handler.Entities;
 using System.Data.Entity;
 
 namespace MovieRentalShop.Handler.Context

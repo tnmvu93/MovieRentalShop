@@ -49,14 +49,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\MovieRentalShopContext.cs" />
-    <Compile Include="Entity\BaseClass.cs" />
-    <Compile Include="Entity\User.cs" />
+    <Compile Include="Entities\BaseClass.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Handlers\BaseQuery\IQuery.cs" />
+    <Compile Include="Handlers\BaseQuery\IQueryHandler.cs" />
+    <Compile Include="Handlers\GetUserQueryHandler.cs" />
     <Compile Include="Migrations\201610310907495_InitializingDatabase.cs" />
     <Compile Include="Migrations\201610310907495_InitializingDatabase.Designer.cs">
       <DependentUpon>201610310907495_InitializingDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Handlers\BaseQuery\IQueryResponse.cs" />
+    <Compile Include="Queries\GetUserQuery.cs" />
+    <Compile Include="QueryResponses\GetUserQueryResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -67,6 +73,7 @@
       <DependentUpon>201610310907495_InitializingDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
