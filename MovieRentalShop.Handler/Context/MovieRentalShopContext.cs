@@ -1,4 +1,5 @@
 ﻿using MovieRentalShop.Handler.Entities;
+using System.Data.Common;
 using System.Data.Entity;
 
 namespace MovieRentalShop.Handler.Context
@@ -9,6 +10,12 @@ namespace MovieRentalShop.Handler.Context
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<MovieRentalShopContext
                 , MovieRentalShop.Handler.Migrations.Configuration>("MovieRentalShopConnectionString"));
+        }
+
+        public MovieRentalShopContext(DbConnection connection)
+            : base(connection, true)
+        {
+            // Connection is disposed when the context is disposed
         }
 
         public DbSet<User> Users { get; set; }
