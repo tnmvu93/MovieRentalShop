@@ -1,27 +1,25 @@
 ﻿using Effort;
-using MovieRentalShop.Handler.Context;
 using NUnit.Framework;
-using System;
+using System.Data.Common;
 
 namespace MovieRentalShop.Test.HandlerTests
 {
     [TestFixture]
     public class BaseHandlerTest 
-    {
-        private MovieRentalShopContext _context;
-
+    {     
         [SetUp]
-        public void SetUp()
+        protected virtual void SetUp()
         {
-            var dataFolder = AppDomain.CurrentDomain.BaseDirectory;
-
-            var connection = DbConnectionFactory.CreateTransient();
-            _context = new MovieRentalShopContext(connection);
         }
 
         [TearDown]
-        public void TearDown()
+        protected virtual void TearDown()
         {
+        }
+
+        protected DbConnection GetTransientConnection()
+        {
+            return DbConnectionFactory.CreateTransient(Initialize.DataLoader);
         }
     }
 }

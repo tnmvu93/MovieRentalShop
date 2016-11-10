@@ -51,18 +51,18 @@
     <Compile Include="Context\MovieRentalShopContext.cs" />
     <Compile Include="Entities\BaseClass.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Handlers\BaseQuery\IQuery.cs" />
-    <Compile Include="Handlers\BaseQuery\IQueryHandler.cs" />
-    <Compile Include="Handlers\GetUserQueryHandler.cs" />
+    <Compile Include="Queries\IQuery.cs" />
+    <Compile Include="Handlers\IQueryHandler.cs" />
+    <Compile Include="Handlers\Users\LoginHandler.cs" />
     <Compile Include="Migrations\201610310907495_InitializingDatabase.cs" />
     <Compile Include="Migrations\201610310907495_InitializingDatabase.Designer.cs">
       <DependentUpon>201610310907495_InitializingDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Handlers\BaseQuery\IQueryResponse.cs" />
-    <Compile Include="Queries\GetUserQuery.cs" />
-    <Compile Include="QueryResponses\GetUserQueryResponse.cs" />
+    <Compile Include="QueryResponses\IQueryResponse.cs" />
+    <Compile Include="Queries\Users\LoginQuery.cs" />
+    <Compile Include="QueryResponses\Users\LoginQueryResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
