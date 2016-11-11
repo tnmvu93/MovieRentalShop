@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRentalShop.Handler", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRentalShop.Test", "MovieRentalShop.Test\MovieRentalShop.Test.csproj", "{D24B3CCB-F9BB-4D5C-AFFC-D1C4F90DAF29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRentalShop.Api", "MovieRentalShop.Api\MovieRentalShop.Api.csproj", "{E4954DE1-6396-4C3C-BB40-1F9A2EA3EBCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D24B3CCB-F9BB-4D5C-AFFC-D1C4F90DAF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D24B3CCB-F9BB-4D5C-AFFC-D1C4F90DAF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D24B3CCB-F9BB-4D5C-AFFC-D1C4F90DAF29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4954DE1-6396-4C3C-BB40-1F9A2EA3EBCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4954DE1-6396-4C3C-BB40-1F9A2EA3EBCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4954DE1-6396-4C3C-BB40-1F9A2EA3EBCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4954DE1-6396-4C3C-BB40-1F9A2EA3EBCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
