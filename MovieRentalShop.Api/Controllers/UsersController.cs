@@ -15,7 +15,7 @@ namespace MovieRentalShop.Api.Controllers
         }
 
         [Route("users/login")]
-        [HttpGet]
+        [HttpPost]
         public IHttpActionResult Login(LoginQuery query)
         {
             var response = _queryDispatcher.Dispatch<LoginQuery, LoginQueryResponse>(query);
