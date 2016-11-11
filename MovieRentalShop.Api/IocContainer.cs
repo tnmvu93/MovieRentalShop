@@ -1,8 +1,10 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using MovieRentalShop.Api.Dispatchers;
+using System;
 using System.Reflection;
 using System.Web.Http;
+using MovieRentalShop.Handler.Handlers;
 
 namespace MovieRentalShop.Api
 {
@@ -17,6 +19,7 @@ namespace MovieRentalShop.Api
 
             RegisterApiControllers(builder);
             RegisterDispatchers(builder);
+            LoadModule(builder);
 
             var container = builder.Build();
 
@@ -32,9 +35,24 @@ namespace MovieRentalShop.Api
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
         }
 
+
+        /// <summary>
+        /// Based on http://docs.autofac.org/en/latest/register/scanning.html?highlight=RegisterAssemblyTypes
+        /// </summary>
+        /// <param name="builder"></param>
         private static void RegisterDispatchers(ContainerBuilder builder)
         {
             builder.RegisterType<QueryDispatcher>().As<IQueryDispatcher>().InstancePerRequest();
+
+            // When hosting applications in IIS all assemblies are loaded into the AppDomain when the application first starts.
+            builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
+                .AsClosedTypesOf(typeof(IQueryHandler<,>))
+                .AsImplementedInterfaces();
+        }
+
+        private static void LoadModule(ContainerBuilder builder)
+        {
+            builder.RegisterAssemblyModules();
         }
     }
 }
