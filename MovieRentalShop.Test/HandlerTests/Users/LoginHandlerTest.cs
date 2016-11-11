@@ -5,7 +5,6 @@ using NUnit.Framework;
 
 namespace MovieRentalShop.Test.HandlerTests.Users
 {
-    [TestFixture]
     public class LoginHandlerTest : BaseHandlerTest
     {
         private MovieRentalShopContext _dbContext;
@@ -20,7 +19,7 @@ namespace MovieRentalShop.Test.HandlerTests.Users
         [Test]
         public void ShouldReturnNull()
         {
-            var query = new LoginQuery { Email = "vutran1@gmail.com", Password = "abc123" };
+            var query = new LoginQuery { Email = "vutran1@gmail.com", Password = "vutran1" };
 
             var handler = new LoginHandler(_dbContext);
 

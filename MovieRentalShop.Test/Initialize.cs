@@ -11,7 +11,7 @@ namespace MovieRentalShop.Test
         {
             if (DataLoader == null)
             {
-                var wrappedDataLoader = new CsvDataLoader(AppDomain.CurrentDomain.BaseDirectory + @"\Data");
+                var wrappedDataLoader = new CsvDataLoader(AppDomain.CurrentDomain.BaseDirectory + @"Data");
                 DataLoader = new CachingDataLoader(wrappedDataLoader, false);
             }
         }
