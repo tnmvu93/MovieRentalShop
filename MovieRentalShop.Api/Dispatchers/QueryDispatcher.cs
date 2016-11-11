@@ -19,7 +19,7 @@ namespace MovieRentalShop.Api.Dispatchers
             where TQuery : IQuery
             where TQueryResponse : IQueryResponse
         {
-            // populate some filters here before resolving
+            // populate some filters here before resolving and calling handler
 
             var queryHandler = _componentContext.Resolve<IQueryHandler<TQuery, TQueryResponse>>();
             return queryHandler.Handle(query);

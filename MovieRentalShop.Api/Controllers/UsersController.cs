@@ -7,7 +7,7 @@ namespace MovieRentalShop.Api.Controllers
 {
     public class UsersController : ApiController
     {
-        private IQueryDispatcher _queryDispatcher;
+        private readonly IQueryDispatcher _queryDispatcher;
 
         public UsersController(IQueryDispatcher queryDispatcher)
         {
