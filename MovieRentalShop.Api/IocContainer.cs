@@ -52,7 +52,7 @@ namespace MovieRentalShop.Api
 
         private static void LoadModule(ContainerBuilder builder)
         {
-            builder.RegisterAssemblyModules();
+            builder.RegisterAssemblyModules(AppDomain.CurrentDomain.GetAssemblies());
         }
     }
 }

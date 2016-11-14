@@ -56,7 +56,6 @@
     <Compile Include="Context\MovieRentalShopContextModule.cs" />
     <Compile Include="Entities\BaseClass.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Queries\IQuery.cs" />
     <Compile Include="Handlers\IQueryHandler.cs" />
     <Compile Include="Handlers\Users\LoginHandler.cs" />
     <Compile Include="Migrations\201610310907495_InitializingDatabase.cs" />
@@ -65,9 +64,6 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryResponses\IQueryResponse.cs" />
-    <Compile Include="Queries\Users\LoginQuery.cs" />
-    <Compile Include="QueryResponses\Users\LoginQueryResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -78,7 +74,12 @@
       <DependentUpon>201610310907495_InitializingDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MovieRentalShop.Share\MovieRentalShop.Share.csproj">
+      <Project>{4aca3948-79c5-4616-9bbf-09954898bff2}</Project>
+      <Name>MovieRentalShop.Share</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

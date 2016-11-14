@@ -1,5 +1,5 @@
 ﻿
-namespace MovieRentalShop.Handler.QueryResponses
+namespace MovieRentalShop.Share.QueryResponses
 {
     public interface IQueryResponse
     {

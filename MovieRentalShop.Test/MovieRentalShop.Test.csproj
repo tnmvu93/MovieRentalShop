@@ -86,6 +86,10 @@
       <Project>{5329d4cd-27ed-494c-a043-4c2bfde22016}</Project>
       <Name>MovieRentalShop.Handler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MovieRentalShop.Share\MovieRentalShop.Share.csproj">
+      <Project>{4aca3948-79c5-4616-9bbf-09954898bff2}</Project>
+      <Name>MovieRentalShop.Share</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

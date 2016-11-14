@@ -1,6 +1,6 @@
 ﻿using MovieRentalShop.Handler.Context;
 using MovieRentalShop.Handler.Handlers;
-using MovieRentalShop.Handler.Queries.Users;
+using MovieRentalShop.Share.Queries.Users;
 using NUnit.Framework;
 
 namespace MovieRentalShop.Test.HandlerTests.Users

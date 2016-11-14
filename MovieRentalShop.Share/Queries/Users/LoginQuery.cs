@@ -1,5 +1,5 @@
 ﻿
-namespace MovieRentalShop.Handler.Queries.Users
+namespace MovieRentalShop.Share.Queries.Users
 {
     public class LoginQuery : IQuery
     {

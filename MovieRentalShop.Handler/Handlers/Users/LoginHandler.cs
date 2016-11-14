@@ -1,6 +1,6 @@
 ﻿using MovieRentalShop.Handler.Context;
-using MovieRentalShop.Handler.Queries.Users;
-using MovieRentalShop.Handler.QueryResponses.Users;
+using MovieRentalShop.Share.Queries.Users;
+using MovieRentalShop.Share.QueryResponses.Users;
 using System.Linq;
 
 namespace MovieRentalShop.Handler.Handlers

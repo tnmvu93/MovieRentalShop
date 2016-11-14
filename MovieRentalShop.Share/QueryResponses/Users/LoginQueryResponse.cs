@@ -1,5 +1,5 @@
 ﻿
-namespace MovieRentalShop.Handler.QueryResponses.Users
+namespace MovieRentalShop.Share.QueryResponses.Users
 {
     public class LoginQueryResponse : IQueryResponse
     {

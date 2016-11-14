@@ -1,8 +1,8 @@
 ﻿using System;
 using Autofac;
 using MovieRentalShop.Handler.Handlers;
-using MovieRentalShop.Handler.Queries;
-using MovieRentalShop.Handler.QueryResponses;
+using MovieRentalShop.Share.Queries;
+using MovieRentalShop.Share.QueryResponses;
 
 namespace MovieRentalShop.Api.Dispatchers
 {

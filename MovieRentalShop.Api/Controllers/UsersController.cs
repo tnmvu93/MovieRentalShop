@@ -1,6 +1,6 @@
 ﻿using MovieRentalShop.Api.Dispatchers;
-using MovieRentalShop.Handler.Queries.Users;
-using MovieRentalShop.Handler.QueryResponses.Users;
+using MovieRentalShop.Share.Queries.Users;
+using MovieRentalShop.Share.QueryResponses.Users;
 using System.Web.Http;
 
 namespace MovieRentalShop.Api.Controllers
