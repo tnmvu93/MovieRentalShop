@@ -57,7 +57,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assests\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="assests\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assests\bootstrap\css\bootstrap.css" />
+    <Content Include="assests\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assests\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assests\bootstrap\js\bootstrap.js" />
+    <Content Include="assests\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assests\bootstrap\js\npm.js" />
     <Content Include="packages.config" />
+    <Content Include="assests\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="assests\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="assests\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assests\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assests\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assests\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assests\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assests\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
