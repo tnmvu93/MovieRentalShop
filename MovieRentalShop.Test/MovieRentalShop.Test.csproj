@@ -70,12 +70,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HandlerTests\BaseHandlerTest.cs" />
+    <Compile Include="HandlerTests\Movies\GetMovieHandlerTest.cs" />
     <Compile Include="HandlerTests\Users\LoginHandlerTest.cs" />
     <Compile Include="Initialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Data\Movies.csv" />
     <None Include="Data\Users.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
