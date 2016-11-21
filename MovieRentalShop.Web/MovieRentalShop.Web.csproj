@@ -57,6 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\components\home\carousel\carousel.directive.js" />
+    <Content Include="app\components\home\carousel\carousel.html" />
+    <Content Include="app\shared\footer\footer.html" />
+    <Content Include="app\shared\menu\menu.directive.js" />
+    <Content Include="app\shared\menu\menu.html" />
     <Content Include="assests\bootstrap\css\bootstrap-theme.css" />
     <Content Include="assests\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="assests\bootstrap\css\bootstrap.css" />
@@ -65,6 +70,12 @@
     <Content Include="assests\bootstrap\js\bootstrap.js" />
     <Content Include="assests\bootstrap\js\bootstrap.min.js" />
     <Content Include="assests\bootstrap\js\npm.js" />
+    <Content Include="assests\css\style.css" />
+    <Content Include="assests\img\film\Inception %282010%29.jpg" />
+    <Content Include="assests\img\film\The Dark Knight %282008%29.jpg" />
+    <Content Include="assests\img\film\The Lord of the Rings The Fellowship of the Ring %282001%29.jpg" />
+    <Content Include="assests\img\film\The Lord of the Rings The Return of the King %282003%29.jpg" />
+    <Content Include="assests\img\film\The Shawshank Redemption %281994%29.jpg" />
     <Content Include="packages.config" />
     <Content Include="assests\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="assests\bootstrap\css\bootstrap-theme.min.css.map" />
@@ -74,6 +85,7 @@
     <Content Include="assests\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assests\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assests\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\shared\footer\footer.directive.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -104,10 +116,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\components\" />
-    <Folder Include="app\shared\" />
-    <Folder Include="assests\css\" />
-    <Folder Include="assests\img\" />
     <Folder Include="assests\js\" />
   </ItemGroup>
   <PropertyGroup>

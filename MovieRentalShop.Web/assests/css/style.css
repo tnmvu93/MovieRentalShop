@@ -1,0 +1,20 @@
+﻿html, body {
+    height: 100%;
+}
+
+app-footer {
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    position: absolute;
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+    border-radius: 0;
+    height: 50px;
+    color: white;
+}
+
+
