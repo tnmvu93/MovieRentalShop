@@ -18,7 +18,9 @@ namespace MovieRentalShop.Handler.Context
             // Connection is disposed when the context is disposed
         }
 
+        
         public DbSet<User> Users { get; set; }
+        public DbSet<Movie> Movies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
