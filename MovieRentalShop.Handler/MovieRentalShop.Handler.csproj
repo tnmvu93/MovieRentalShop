@@ -65,6 +65,7 @@
     <Compile Include="Handlers\Movies\GetMovieHandler.cs" />
     <Compile Include="Handlers\Users\LoginHandler.cs" />
     <Compile Include="Mapping\MappingFromEntityProfile.cs" />
+    <Compile Include="Mapping\MappingModule.cs" />
     <Compile Include="Migrations\201610310907495_InitializingDatabase.cs" />
     <Compile Include="Migrations\201610310907495_InitializingDatabase.Designer.cs">
       <DependentUpon>201610310907495_InitializingDatabase.cs</DependentUpon>
