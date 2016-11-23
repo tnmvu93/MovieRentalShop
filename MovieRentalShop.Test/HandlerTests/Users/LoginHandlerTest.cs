@@ -2,6 +2,7 @@
 using MovieRentalShop.Handler.Handlers;
 using MovieRentalShop.Share.Queries.Users;
 using NUnit.Framework;
+using System.Linq;
 
 namespace MovieRentalShop.Test.HandlerTests.Users
 {

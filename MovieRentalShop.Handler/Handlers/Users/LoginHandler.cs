@@ -18,6 +18,8 @@ namespace MovieRentalShop.Handler.Handlers
         {
             var response = new LoginQueryResponse { Success = false };
 
+            var test = _dbContext.Users.ToList();
+
             if (query != null)
             {
                 response.Success = _dbContext.Users.Any(x => x.Email == query.Email && x.Password == query.Password);

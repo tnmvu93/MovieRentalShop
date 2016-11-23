@@ -9,7 +9,7 @@ namespace MovieRentalShop.Test.HandlerTests
     [TestFixture]
     public class BaseHandlerTest 
     {
-        protected IMappingEngine Mapper;
+        protected IMapper Mapper;
      
         [SetUp]
         protected virtual void SetUp()
@@ -19,7 +19,7 @@ namespace MovieRentalShop.Test.HandlerTests
                 x.AddProfile<MappingFromEntityProfile>();
             });
 
-            Mapper = AutoMapper.Mapper.Engine;
+            Mapper = AutoMapper.Mapper.Instance;
         }
 
         [TearDown]

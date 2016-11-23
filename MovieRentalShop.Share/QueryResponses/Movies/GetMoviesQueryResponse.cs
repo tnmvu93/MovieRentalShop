@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace MovieRentalShop.Share.QueryResponses.Movies
 {
-    public class GetMovieQueryResponse : IQueryResponse
+    public class GetMoviesQueryResponse : IQueryResponse
     {
-        public IEnumerable<GetMovieViewModel> Movies { get; set; }
+        public IEnumerable<GetMoviesViewModel> Movies { get; set; }
     }
 }

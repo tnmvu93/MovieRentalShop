@@ -41,12 +41,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\IQuery.cs" />
-    <Compile Include="Queries\Movies\GetMovieQuery.cs" />
+    <Compile Include="Queries\Movies\GetMoviesQuery.cs" />
     <Compile Include="Queries\Users\LoginQuery.cs" />
     <Compile Include="QueryResponses\IQueryResponse.cs" />
-    <Compile Include="QueryResponses\Movies\GetMovieQueryResponse.cs" />
+    <Compile Include="QueryResponses\Movies\GetMoviesQueryResponse.cs" />
     <Compile Include="QueryResponses\Users\LoginQueryResponse.cs" />
-    <Compile Include="ViewModels\Movies\GetMovieViewModel.cs" />
+    <Compile Include="ViewModels\Movies\GetMoviesViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

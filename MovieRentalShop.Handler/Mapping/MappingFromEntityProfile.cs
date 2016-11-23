@@ -12,7 +12,7 @@ namespace MovieRentalShop.Handler.Mapping
     {
         protected override void Configure()
         {
-            CreateMap<Movie, GetMovieViewModel>();
+            CreateMap<Movie, GetMoviesViewModel>();
         }
     }
 }

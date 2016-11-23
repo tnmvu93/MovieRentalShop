@@ -21,9 +21,9 @@ namespace MovieRentalShop.Test.HandlerTests.Movies
         public void ShouldReturnAllMovies()
         {
             var numMovie = _dbContext.Movies.Count();
-            var query = new GetMovieQuery();
+            var query = new GetMoviesQuery();
 
-            var handler = new GetMovieHandler(_dbContext);
+            var handler = new GetMoviesHandler(_dbContext, Mapper);
 
             var response = handler.Handle(query);
 
