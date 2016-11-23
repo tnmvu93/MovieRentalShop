@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using AutoMapper;
-using AutoMapper.Mappers;
 
 namespace MovieRentalShop.Handler.Mapping
 {
@@ -13,12 +12,7 @@ namespace MovieRentalShop.Handler.Mapping
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.Register(x => new MapperConfiguration(config =>
-            {
-                config.AddProfile<MappingFromEntityProfile>();
-            }));
-
-            builder.Register(x => x.Resolve<MapperConfiguration>().CreateMapper()).As<IMapper>();
+            Mapper.AddProfile<MappingFromEntityProfile>();
         }
     }
 }
