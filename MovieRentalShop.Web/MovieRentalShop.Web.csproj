@@ -61,6 +61,7 @@
     <Content Include="app\components\home\carousel\carousel.directive.js" />
     <Content Include="app\components\home\carousel\carousel.html" />
     <Content Include="app\components\home\carousel\carousel.service.js" />
+    <Content Include="app\shared\apiCalling\apiCalling.service.js" />
     <Content Include="app\shared\footer\footer.html" />
     <Content Include="app\shared\menu\menu.directive.js" />
     <Content Include="app\shared\menu\menu.html" />

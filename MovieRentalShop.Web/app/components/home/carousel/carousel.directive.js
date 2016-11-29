@@ -12,31 +12,12 @@
         }
     });
 
-    app.controller('carouselController', [function () {
-        this.top10 = [
-            {
-                id: 0,
-                name: 'Inception (2010)',
-                path: './assests/img/film/Inception (2010).jpg'
-            }, {
-                id: 1,
-                name: 'The Dark Knight (2008)',
-                path: './assests/img/film/The Dark Knight (2008).jpg'
-            }, {
-                id: 2,
-                name: 'The Lord of the Rings: The Fellowship of the Ring (2001)',
-                path: './assests/img/film/The Lord of the Rings The Fellowship of the Ring (2001).jpg'
-            }, {
-                id: 3,
-                name: 'The Lord of the Rings: The Return of the King (2003)',
-                path: './assests/img/film/The Lord of the Rings The Return of the King (2003).jpg'
-            }, {
-                id: 4,
-                name: 'The Shawshank Redemption (1994)',
-                path: './assests/img/film/The Shawshank Redemption (1994).jpg'
-            }
-        ];
-
+    app.controller('carouselController', ['ApiCalling', function (ApiCalling) {
+        var self = this;
+        this.top10 = [];
+        var result = ApiCalling.get('http://localhost:52217/movies/getmovies', function (response, status) {
+            self.top10 = response;
+        });
     }]);
 
 })();

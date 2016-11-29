@@ -1,5 +1,10 @@
 ﻿'use strict';
 
 (function () {
-    angular.module('MovieRentalShop', ['ui.bootstrap']);
+    var app = angular.module('MovieRentalShop', ['ui.bootstrap']);
+
+    //app.config(function ($httpProvider) {
+    //    //Enable cross domain calls
+    //    $httpProvider.defaults.useXDomain = true;
+    //});
 })();
