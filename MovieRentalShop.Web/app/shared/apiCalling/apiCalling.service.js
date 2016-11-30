@@ -5,12 +5,10 @@
 
     app.service('ApiCalling', ['$http', function ($http) {
 
-        this.get = function (api, success, error) {
+        this.get = function (api, params, success, error) {
             var result = $http.get(api, {
-                //withCredentials: true,
-                //headers: {
-                //    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
-                //}
+                withCredentials: true,
+                params: params
             })
             .success(function (response, status) {
                 if (success && typeof(success) === 'function') {
@@ -28,7 +26,9 @@
         }
 
         this.post = function (api, data, success, error) {
-            var result = $http.post(api, data)
+            var result = $http.post(api, data, {
+                withCredentials: true
+            })
             .success(function (response, status) {
                 if (success && typeof (success) === 'function') {
                     success(response, status);

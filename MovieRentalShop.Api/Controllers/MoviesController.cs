@@ -2,6 +2,7 @@
 using MovieRentalShop.Share.Queries.Movies;
 using MovieRentalShop.Share.QueryResponses.Movies;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace MovieRentalShop.Api.Controllers
 {

@@ -7,14 +7,15 @@ namespace MovieRentalShop.Api
     {
         public static void Register(HttpConfiguration config)
         {
+            // Enable CORS for all origins, all headers, and all methods,
+            var cors = new EnableCorsAttribute("http://localhost:53432", "*", "*");
+            cors.SupportsCredentials = true;
+            config.EnableCors(cors);
+
             // Web API configuration and services
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-
-            // Enable CORS for all origins, all headers, and all methods,
-            var cors = new EnableCorsAttribute("http://localhost:53432/", "*", "*");
-            config.EnableCors(cors);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

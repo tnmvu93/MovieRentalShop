@@ -15,7 +15,7 @@
     app.controller('carouselController', ['ApiCalling', function (ApiCalling) {
         var self = this;
         this.top10 = [];
-        var result = ApiCalling.get('http://localhost:52217/movies/getmovies', function (response, status) {
+        var result = ApiCalling.get('http://localhost:52217/movies/getmovies', null, function (response, status) {
             self.top10 = response;
         });
     }]);
