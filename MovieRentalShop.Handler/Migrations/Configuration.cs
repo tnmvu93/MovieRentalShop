@@ -10,7 +10,6 @@ namespace MovieRentalShop.Handler.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(MovieRentalShopContext context)
