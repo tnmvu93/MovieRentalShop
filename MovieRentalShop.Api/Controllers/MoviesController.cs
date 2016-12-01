@@ -22,5 +22,16 @@ namespace MovieRentalShop.Api.Controllers
             var result = _queryDispatcher.Dispatch<GetMoviesQuery, GetMoviesQueryResponse>(new GetMoviesQuery());
             return Ok(result);
         }
+
+        [HttpGet]
+        [Route("movie/{movie:int}")]
+        public IHttpActionResult GetMovie(int movieId)
+        {
+            var result = _queryDispatcher.Dispatch<GetMoviesQuery, GetMoviesQueryResponse>(new GetMoviesQuery
+            {
+                Id = movieId
+            });
+            return Ok(result);
+        }
     }
 }

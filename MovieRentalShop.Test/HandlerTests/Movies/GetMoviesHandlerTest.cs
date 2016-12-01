@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace MovieRentalShop.Test.HandlerTests.Movies
 {
-    public class GetMovieHandlerTest : BaseHandlerTest
+    public class GetMoviesHandlerTest : BaseHandlerTest
     {
         private MovieRentalShopContext _dbContext;
 
@@ -18,15 +18,16 @@ namespace MovieRentalShop.Test.HandlerTests.Movies
         }
 
         [Test]
-        public void ShouldReturnExactlyMovieById()
+        public void ShouldReturnAllMovies()
         {
-            var query = new GetMovieQuery { Id = 1 };
+            var numMovie = _dbContext.Movies.Count();
+            var query = new GetMoviesQuery();
 
-            var handler = new GetMovieHandler(_dbContext, Mapper);
+            var handler = new GetMoviesHandler(_dbContext, Mapper);
 
             var response = handler.Handle(query);
 
-            Assert.AreEqual("movie 1", response.Name);
+            Assert.AreEqual(numMovie, response.Movies.Count());
         }
     }
 }

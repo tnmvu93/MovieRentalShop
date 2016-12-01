@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MovieRentalShop.Handler.Entities;
+using MovieRentalShop.Share.QueryResponses.Movies;
 using MovieRentalShop.Share.ViewModels.Movies;
 
 namespace MovieRentalShop.Handler.Mapping
@@ -13,6 +14,7 @@ namespace MovieRentalShop.Handler.Mapping
         protected override void Configure()
         {
             CreateMap<Movie, GetMoviesViewModel>();
+            CreateMap<Movie, GetMovieQueryResponse>();
         }
     }
 }

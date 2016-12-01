@@ -1,7 +1,7 @@
 ﻿<div style="height: 50px">
     <div uib-carousel active="movieList.active" interval="movieList.interval" no-wrap="movieList.noWrapSlides">
-        <div uib-slide ng-repeat="slide in movieList.top10 track by slide.Id" index="slide.Id">
-            <img ng-src="{{slide.ImageUrl}}" style="margin: auto; width: 342px; height: 500px;" class="filmPannel"/>
+        <div uib-slide ng-repeat="slide in movieList.top10" index="slide.Index">
+            <img ng-click="movieList.goToDetail(slide.Id)" ng-src="{{slide.ImageUrl}}" style="margin: auto; width: 342px; height: 500px;" class="filmPannel"/>
             <div class="carousel-caption">
                 <h4>Image {{slide.Id}}</h4>
                 <p>{{slide.Name}}</p>

@@ -62,6 +62,7 @@
     <Compile Include="Entities\Movie.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Handlers\IQueryHandler.cs" />
+    <Compile Include="Handlers\Movies\GetMovieHandler.cs" />
     <Compile Include="Handlers\Movies\GetMoviesHandler.cs" />
     <Compile Include="Handlers\Users\LoginHandler.cs" />
     <Compile Include="Mapping\MappingFromEntityProfile.cs" />

@@ -12,8 +12,8 @@
         .module('app.movie')
         .component('movieList', {
             templateUrl: './app/components/movie/views/movie.list.template.html',
-            controller: ['apiCalling', 
-                function (apiCalling) {
+            controller: ['$location', 'apiCalling', 
+                function ($location, apiCalling) {
                     var self = this;
                     this.top10 = [];
                     this.active = 0;
@@ -23,9 +23,13 @@
                     apiCalling.get('http://localhost:52217/movies/getmovies', null, function (response, status) {
                         self.top10 = response.Movies;
                         for (var i = 0; i < self.top10.length; i++) {
-                            self.top10[i].Id = i;
+                            self.top10[i].Index = i;
                         }
                     });
+
+                    this.goToDetail = function (movieId) {
+                        $location.path('/movie/' + movieId)
+                    }
                 }],
             controllerAs: 'movieList'
         });

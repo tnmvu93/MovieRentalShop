@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="HandlerTests\BaseHandlerTest.cs" />
     <Compile Include="HandlerTests\Movies\GetMovieHandlerTest.cs" />
+    <Compile Include="HandlerTests\Movies\GetMoviesHandlerTest.cs" />
     <Compile Include="HandlerTests\Users\LoginHandlerTest.cs" />
     <Compile Include="Initialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

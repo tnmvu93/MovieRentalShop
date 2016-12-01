@@ -58,8 +58,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\components\movie\controllers\movie.detail.controller.js" />
     <Content Include="app\components\movie\controllers\movie.list.controller.js" />
     <Content Include="app\components\movie\movie.module.js" />
+    <Content Include="app\components\movie\views\movie.detail.template.html" />
     <Content Include="app\components\movie\views\movie.list.template.html" />
     <Content Include="app\shared\apiCalling\apiCalling.service.js" />
     <Content Include="app\shared\footer\footer.html" />
