@@ -9,23 +9,23 @@ using System.Linq;
 
 namespace MovieRentalShop.Handler.Handlers.Movies
 {
-    public class GetMoviesHandler : IQueryHandler<GetMoviesQuery, GetMoviesQueryResponse>
+    public class GetListMoviesHandler : IQueryHandler<GetListMoviesQuery, GetListMoviesQueryResponse>
     {
         private readonly MovieRentalShopContext _dbContext;
         private readonly IMapper _mapper;
 
-        public GetMoviesHandler(MovieRentalShopContext dbContext, IMapper mapper)
+        public GetListMoviesHandler(MovieRentalShopContext dbContext, IMapper mapper)
         {
             this._dbContext = dbContext;
             this._mapper = mapper;
         }
 
-        public GetMoviesQueryResponse Handle(GetMoviesQuery query)
+        public GetListMoviesQueryResponse Handle(GetListMoviesQuery query)
         {
             var movies = _dbContext.Movies.ToList();
             var movieVMs = _mapper.Map<List<Movie>, List<GetMoviesViewModel>>(movies);
 
-            return new GetMoviesQueryResponse
+            return new GetListMoviesQueryResponse
             {
                 Movies = movieVMs
             };

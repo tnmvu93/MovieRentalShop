@@ -3,7 +3,7 @@
 (function () {
     angular.module('app').config(['$routeProvider', function ($routeProvider) {
         $routeProvider
-            .when('/movie/:movieId', {
+            .when('/movies/:movieId', {
                 template: '<movie-detail></movie-detail>'
             });
     }]);
@@ -11,20 +11,17 @@
     angular
         .module('app.movie')
         .component('movieDetail', {
-            tempateUrl: './app/components/movie/views/movie.detail.template.html',
-            controllerAs: 'movieCtrl',
+            templateUrl: './app/components/movie/views/movie.detail.template.html',
             controller: ['$routeParams', 'apiCalling',
-                function MovieDetailController($routeParams, apiCalling) {
+                function ($routeParams, apiCalling) {
                     var self = this;
                     this.movie = {};
-                    var params = {
-                        movieId: $routeParams.movieId
-                    };
 
-                    apiCalling.get('http://localhost:52217/movies/', params).then(function (response) {
+                    apiCalling.get('http://localhost:52217/movies/' + $routeParams.movieId, null, function(response, status) {
                         self.movie = response;
                     });
-            }]
+                }],
+            controllerAs: 'movieCtrl'
         });
 
    

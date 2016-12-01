@@ -19,15 +19,15 @@ namespace MovieRentalShop.Api.Controllers
         [Route("movies/getmovies")]
         public IHttpActionResult GetMovies()
         {
-            var result = _queryDispatcher.Dispatch<GetMoviesQuery, GetMoviesQueryResponse>(new GetMoviesQuery());
+            var result = _queryDispatcher.Dispatch<GetListMoviesQuery, GetListMoviesQueryResponse>(new GetListMoviesQuery());
             return Ok(result);
         }
 
         [HttpGet]
-        [Route("movie/{movie:int}")]
+        [Route("movies/{movieId:int}")]
         public IHttpActionResult GetMovie(int movieId)
         {
-            var result = _queryDispatcher.Dispatch<GetMoviesQuery, GetMoviesQueryResponse>(new GetMoviesQuery
+            var result = _queryDispatcher.Dispatch<GetMovieQuery, GetMovieQueryResponse>(new GetMovieQuery
             {
                 Id = movieId
             });

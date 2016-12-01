@@ -28,7 +28,7 @@
                     });
 
                     this.goToDetail = function (movieId) {
-                        $location.path('/movie/' + movieId)
+                        $location.path('/movies/' + movieId)
                     }
                 }],
             controllerAs: 'movieList'

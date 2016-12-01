@@ -2,7 +2,7 @@
 
 namespace MovieRentalShop.Share.Queries.Movies
 {
-    public class GetMoviesQuery : IQuery
+    public class GetListMoviesQuery : IQuery
     {
         public int Id { get; set; }
     }

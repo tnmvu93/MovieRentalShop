@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace MovieRentalShop.Test.HandlerTests.Movies
 {
-    public class GetMoviesHandlerTest : BaseHandlerTest
+    public class GetListMoviesHandlerTest : BaseHandlerTest
     {
         private MovieRentalShopContext _dbContext;
 
@@ -21,9 +21,9 @@ namespace MovieRentalShop.Test.HandlerTests.Movies
         public void ShouldReturnAllMovies()
         {
             var numMovie = _dbContext.Movies.Count();
-            var query = new GetMoviesQuery();
+            var query = new GetListMoviesQuery();
 
-            var handler = new GetMoviesHandler(_dbContext, Mapper);
+            var handler = new GetListMoviesHandler(_dbContext, Mapper);
 
             var response = handler.Handle(query);
 
