@@ -58,9 +58,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\components\home\carousel\carousel.directive.js" />
-    <Content Include="app\components\home\carousel\carousel.html" />
-    <Content Include="app\components\home\carousel\carousel.service.js" />
+    <Content Include="app\components\movie\controllers\movie.list.controller.js" />
+    <Content Include="app\components\movie\movie.module.js" />
+    <Content Include="app\components\movie\views\movie.list.template.html" />
     <Content Include="app\shared\apiCalling\apiCalling.service.js" />
     <Content Include="app\shared\footer\footer.html" />
     <Content Include="app\shared\menu\menu.directive.js" />
@@ -130,6 +130,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\components\home\controllers\" />
+    <Folder Include="app\components\home\services\" />
+    <Folder Include="app\components\home\views\" />
+    <Folder Include="app\components\movie\services\" />
     <Folder Include="assests\js\" />
   </ItemGroup>
   <PropertyGroup>

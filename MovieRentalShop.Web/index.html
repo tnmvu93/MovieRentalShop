@@ -7,13 +7,11 @@
     <link rel="stylesheet" href="./assests/bootstrap/css/bootstrap.min.css" />
     <link href="assests/css/style.css" rel="stylesheet" />
 </head>
-<body ng-app="MovieRentalShop">
+<body ng-app="app">
     
     <app-menu></app-menu>
 
-    <!--<ng-view></ng-view>-->
-
-    <home-carousel></home-carousel>
+    <ng-view></ng-view>
 
     <app-footer></app-footer>
 
@@ -26,7 +24,8 @@
     <script src="app/shared/footer/footer.directive.js"></script>
     <script src="app/shared/menu/menu.directive.js"></script>
     <script src="app/shared/apiCalling/apiCalling.service.js"></script>
-    <script src="app/components/home/carousel/carousel.directive.js"></script>
+    <script src="app/components/movie/movie.module.js"></script>
+    <script src="app/components/movie/controllers/movie.list.controller.js"></script>
 </body>
 </html>
 

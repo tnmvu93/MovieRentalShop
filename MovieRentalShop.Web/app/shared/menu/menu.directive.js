@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 (function () {
-    var app = angular.module('MovieRentalShop');
+    var app = angular.module('app');
 
     app.directive('appMenu', function () {
         return {

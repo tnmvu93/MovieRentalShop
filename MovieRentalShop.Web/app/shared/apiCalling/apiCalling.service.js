@@ -1,9 +1,9 @@
 ﻿'use strict';
 
 (function () {
-    var app = angular.module('MovieRentalShop');
+    var app = angular.module('app');
 
-    app.service('ApiCalling', ['$http', function ($http) {
+    app.service('apiCalling', ['$http', function ($http) {
 
         this.get = function (api, params, success, error) {
             var result = $http.get(api, {

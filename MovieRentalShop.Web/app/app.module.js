@@ -1,9 +1,21 @@
 ﻿'use strict';
 
 (function () {
-    angular.module('MovieRentalShop', [
+    angular.module('app', [
     'ngAnimate',
-    'ui.bootstrap']);
+    'ngRoute',
+    'ui.bootstrap',
+    'app.movie'])
+    .config(['$locationProvider', '$routeProvider',
+        function ($locationProvider, $routeProvider) {
+            $locationProvider.hashPrefix('!');
+
+            $routeProvider
+                .otherwise({
+                    redirectTo: '/'
+                });
+        }
+    ]);
 
     
 })();
