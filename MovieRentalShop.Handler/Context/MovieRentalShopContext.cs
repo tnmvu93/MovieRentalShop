@@ -8,8 +8,9 @@ namespace MovieRentalShop.Handler.Context
     {
         public MovieRentalShopContext() : base("name=MovieRentalShopConnectionString")
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MovieRentalShopContext
-                , MovieRentalShop.Handler.Migrations.Configuration>("MovieRentalShopConnectionString"));
+            // https://blog.oneunicorn.com/2013/05/28/database-initializer-and-migrations-seed-methods/
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<MovieRentalShopContext
+            //    , MovieRentalShop.Handler.Migrations.Configuration>("MovieRentalShopConnectionString"));
         }
 
         public MovieRentalShopContext(DbConnection connection)
