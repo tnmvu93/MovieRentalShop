@@ -13,16 +13,17 @@
         .component('movieDetail', {
             tempateUrl: './app/components/movie/views/movie.detail.template.html',
             controllerAs: 'movieCtrl',
-            controller: ['$routeParams', 'apiCalling', function MovieDetailController($routeParams, apiCalling) {
-                var self = this;
-                this.movie = {};
-                var params = {
-                    movieId: $routeParams.movieId
-                };
+            controller: ['$routeParams', 'apiCalling',
+                function MovieDetailController($routeParams, apiCalling) {
+                    var self = this;
+                    this.movie = {};
+                    var params = {
+                        movieId: $routeParams.movieId
+                    };
 
-                apiCalling.get('http://localhost:52217/movies/getmovie/', params).then(function (response) {
-                    self.movie = response;
-                });
+                    apiCalling.get('http://localhost:52217/movies/', params).then(function (response) {
+                        self.movie = response;
+                    });
             }]
         });
 
