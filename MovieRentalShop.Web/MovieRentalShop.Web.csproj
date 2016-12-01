@@ -89,6 +89,7 @@
     <Content Include="assests\img\film\Up %282009%29.jpg" />
     <Content Include="assests\img\film\WALL-E %282008%29.jpg" />
     <Content Include="assests\img\film\Zootopia %282016%29.jpg" />
+    <Content Include="assests\libs\angular-animate.min.js" />
     <Content Include="packages.config" />
     <Content Include="assests\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="assests\bootstrap\css\bootstrap-theme.min.css.map" />
