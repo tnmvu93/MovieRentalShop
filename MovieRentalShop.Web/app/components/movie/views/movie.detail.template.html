@@ -1,3 +1,10 @@
-﻿<div style="height: 50px">
-    <img ng-src="{{movieCtrl.movie.ImageUrl}}" style="margin: auto; width: 342px; height: 500px;" class="filmPannel" />
+﻿<div style="height: 50px" class="container">
+    <div>
+        <img ng-src="{{movieCtrl.movie.ImageUrl}}" alt="{{movieCtrl.movie.Name}}" style="margin: auto; width: 342px; height: 500px;" class="thumbnail movie-detail-image" />
+    </div>
+    <div>
+        <b>{{movieCtrl.movie.Name}}<span> ({{movieCtrl.movie.Year}})</span></b>
+        <p><span>{{movieCtrl.movie.Imdb}}</span></p>
+        <p>{{movieCtrl.movie.Description}}</p>
+    </div>
 </div>

@@ -2,6 +2,7 @@
     height: 100%;
 }
 
+
 app-footer {
     width: 100%;
     height: 50px;
@@ -9,6 +10,7 @@ app-footer {
     position: absolute;
     background-color: black;
     color: white;
+    clear: both
 }
 
 .navbar {
@@ -21,4 +23,7 @@ app-footer {
     cursor: pointer;
 }
 
+.movie-detail-image {
+    float: right;
+}
 
