@@ -11,7 +11,7 @@
     angular
         .module('app.movie')
         .component('movieDetail', {
-            templateUrl: './app/components/movie/views/movie.detail.template.html',
+            templateUrl: './app/components/movie/views/movie-detail.html',
             controller: ['$routeParams', 'apiCalling',
                 function ($routeParams, apiCalling) {
                     var self = this;
