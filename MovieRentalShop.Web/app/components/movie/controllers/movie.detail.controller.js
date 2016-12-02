@@ -12,16 +12,18 @@
         .module('app.movie')
         .component('movieDetail', {
             templateUrl: './app/components/movie/views/movie-detail.html',
+            controllerAs: 'movieCtrl',
             controller: ['$routeParams', 'apiCalling',
                 function ($routeParams, apiCalling) {
                     var self = this;
                     this.movie = {};
 
-                    apiCalling.get('http://localhost:52217/movies/' + $routeParams.movieId, null, function(response, status) {
-                        self.movie = response;
-                    });
-                }],
-            controllerAs: 'movieCtrl'
+                    apiCalling
+                        .get('http://localhost:52217/movies/' + $routeParams.movieId)
+                        .then(function (response) {
+                            self.movie = response.data;
+                        });
+                }]
         });
 
    
