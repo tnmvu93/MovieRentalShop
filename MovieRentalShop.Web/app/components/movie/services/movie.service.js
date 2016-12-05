@@ -7,7 +7,7 @@
             , function (apiCalling) {
 
                 this.createMovie = function (movie) {
-                    apiCalling.post('movie/create', movie);
+                    apiCalling.post('movies/create', movie);
                 }
         }]);
 

@@ -1,5 +1,5 @@
 ﻿<div class="container">
-    <form novalidate>
+    <form novalidate ng-submit="movieCtrl.createMovie()">
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
@@ -37,6 +37,6 @@
             </div>
         </div>
         <button type="button" class="btn btn-default">Cancel</button>
-        <button type="submit" ng-submit="movieCtrl.createMovie()" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Create</button>
     </form>
 </div>

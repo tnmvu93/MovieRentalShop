@@ -27,7 +27,8 @@
 
         this.post = function (api, data, success, error) {
             var result = $http.post(api, data, {
-                withCredentials: true
+                withCredentials: true,
+                'Content-Type': 'application/json'
             })
             .success(function (response, status) {
                 if (success && typeof (success) === 'function') {
