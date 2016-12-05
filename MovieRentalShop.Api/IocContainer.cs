@@ -43,6 +43,7 @@ namespace MovieRentalShop.Api
         private static void RegisterDispatchers(ContainerBuilder builder)
         {
             builder.RegisterType<QueryDispatcher>().As<IQueryDispatcher>().InstancePerRequest();
+            builder.RegisterType<CommandDispatcher>().As<ICommandDispatcher>().InstancePerRequest();
 
             // When hosting applications in IIS all assemblies are loaded into the AppDomain when the application first starts.
             builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
