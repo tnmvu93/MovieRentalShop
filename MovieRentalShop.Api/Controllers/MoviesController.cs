@@ -29,7 +29,7 @@ namespace MovieRentalShop.Api.Controllers
 
         [HttpPost]
         [Route("create")]
-        public IHttpActionResult CreateMovie([FromBody]CreateMovieCommand command)
+        public IHttpActionResult CreateMovie(CreateMovieCommand command)
         {
             var result = _commandDispatcher.Dispatch<CreateMovieCommand, CreateMovieCommandResponse>(command);
             return Ok(result);

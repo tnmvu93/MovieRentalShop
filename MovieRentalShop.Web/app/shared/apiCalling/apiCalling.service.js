@@ -3,10 +3,12 @@
 (function () {
     var app = angular.module('app');
 
+    var apiServerUrl = 'http://localhost:52217/';
+
     app.service('apiCalling', ['$http', function ($http) {
 
         this.get = function (api, params, success, error) {
-            var result = $http.get(api, {
+            var result = $http.get(apiServerUrl + api, {
                 withCredentials: true,
                 params: params
             })
@@ -26,7 +28,7 @@
         }
 
         this.post = function (api, data, success, error) {
-            var result = $http.post(api, data, {
+            var result = $http.post(apiServerUrl + api, data, {
                 withCredentials: true,
                 'Content-Type': 'application/json'
             })
