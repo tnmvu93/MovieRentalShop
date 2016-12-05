@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandResponses\ICommandResponse.cs" />
+    <Compile Include="CommandResponses\Movies\CreateMovieCommandResponse.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\Movies\CreateMovieCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\IQuery.cs" />
     <Compile Include="Queries\Movies\GetMovieQuery.cs" />
@@ -50,6 +54,7 @@
     <Compile Include="QueryResponses\Users\LoginQueryResponse.cs" />
     <Compile Include="ViewModels\Movies\GetMoviesViewModel.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

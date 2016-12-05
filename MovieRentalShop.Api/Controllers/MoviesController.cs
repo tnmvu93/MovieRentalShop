@@ -1,18 +1,21 @@
 ﻿using MovieRentalShop.Api.Dispatchers;
+using MovieRentalShop.Share.CommandResponses.Movies;
+using MovieRentalShop.Share.Commands.Movies;
 using MovieRentalShop.Share.Queries.Movies;
 using MovieRentalShop.Share.QueryResponses.Movies;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace MovieRentalShop.Api.Controllers
 {
     public class MoviesController : ApiController
     {
         private readonly IQueryDispatcher _queryDispatcher;
+        private readonly ICommandDispatcher _commandDispatcher;
 
-        public MoviesController(IQueryDispatcher queryDispatcher)
+        public MoviesController(IQueryDispatcher queryDispatcher, ICommandDispatcher commandDispatcher)
         {
             this._queryDispatcher = queryDispatcher;
+            this._commandDispatcher = commandDispatcher;
         }
 
         [HttpGet]
@@ -31,6 +34,14 @@ namespace MovieRentalShop.Api.Controllers
             {
                 Id = movieId
             });
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("movies/create")] 
+        public IHttpActionResult CreateMovie(CreateMovieCommand command)
+        {
+            var result = _commandDispatcher.Dispatch<CreateMovieCommand, CreateMovieCommandResponse>(command);
             return Ok(result);
         }
     }

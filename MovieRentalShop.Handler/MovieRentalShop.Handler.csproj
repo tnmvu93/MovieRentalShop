@@ -61,6 +61,7 @@
     <Compile Include="Entities\BaseClass.cs" />
     <Compile Include="Entities\Movie.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Handlers\ICommandHandler.cs" />
     <Compile Include="Handlers\IQueryHandler.cs" />
     <Compile Include="Handlers\Movies\GetMovieHandler.cs" />
     <Compile Include="Handlers\Movies\GetListMoviesHandler.cs" />

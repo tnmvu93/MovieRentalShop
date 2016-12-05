@@ -62,6 +62,7 @@
     <Content Include="app\components\movie\controllers\movie.list.controller.js" />
     <Content Include="app\components\movie\controllers\movie.create.controller.js" />
     <Content Include="app\components\movie\movie.module.js" />
+    <Content Include="app\components\movie\services\movie.service.js" />
     <Content Include="app\components\movie\views\movie-detail.html" />
     <Content Include="app\components\movie\views\movie-list.html" />
     <Content Include="app\components\movie\views\movie-create.html" />
@@ -69,7 +70,6 @@
     <Content Include="app\shared\footer\footer.html" />
     <Content Include="app\shared\menu\menu.directive.js" />
     <Content Include="app\shared\menu\menu.html" />
-    <Content Include="app\shared\uploadImage\uploadImage.module.js" />
     <Content Include="assests\bootstrap\css\bootstrap-theme.css" />
     <Content Include="assests\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="assests\bootstrap\css\bootstrap.css" />
@@ -138,7 +138,6 @@
     <Folder Include="app\components\home\controllers\" />
     <Folder Include="app\components\home\services\" />
     <Folder Include="app\components\home\views\" />
-    <Folder Include="app\components\movie\services\" />
     <Folder Include="assests\js\" />
   </ItemGroup>
   <PropertyGroup>

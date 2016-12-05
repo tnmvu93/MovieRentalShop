@@ -104,6 +104,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Dispatchers\CommandDispatcher.cs" />
+    <Compile Include="Dispatchers\ICommandDispatcher.cs" />
     <Compile Include="Dispatchers\IQueryDispatcher.cs" />
     <Compile Include="Dispatchers\QueryDispatcher.cs" />
     <Compile Include="Global.asax.cs">

@@ -13,8 +13,15 @@
         .component('movieCreate', {
             templateUrl: './app/components/movie/views/movie-create.html',
             controllerAs: 'movieCtrl',
-            controller: function () {
+            controller: ['movieServices', function (movieServices) {
                 var self = this;
-            }
+
+                this.movie = {
+                };
+
+                this.createMovie = function () {
+                    movieServices.createMovie(self.movie);
+                }
+            }]
         });
 })();

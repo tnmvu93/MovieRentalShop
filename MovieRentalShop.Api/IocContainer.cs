@@ -48,6 +48,10 @@ namespace MovieRentalShop.Api
             builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
                 .AsClosedTypesOf(typeof(IQueryHandler<,>))
                 .AsImplementedInterfaces();
+
+            builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
+                .AsClosedTypesOf(typeof(ICommandHandler<,>))
+                .AsImplementedInterfaces();
         }
 
         private static void LoadModule(ContainerBuilder builder)
