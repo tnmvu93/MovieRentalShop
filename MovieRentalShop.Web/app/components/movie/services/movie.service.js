@@ -9,6 +9,8 @@
                 this.createMovie = function (movie) {
                     apiCalling.post('movies/create', movie);
                 }
+
+                
         }]);
 
 })();
