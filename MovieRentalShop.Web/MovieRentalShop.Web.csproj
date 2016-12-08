@@ -58,6 +58,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\components\authentication\authentication.module.js" />
+    <Content Include="app\components\authentication\controllers\signIn.controller.js" />
+    <Content Include="app\components\authentication\controllers\signUp.controller.js" />
+    <Content Include="app\components\authentication\services\authentication.service.js" />
+    <Content Include="app\components\authentication\views\sign-in.html" />
+    <Content Include="app\components\authentication\views\sign-up.html" />
     <Content Include="app\components\movie\controllers\movie.detail.controller.js" />
     <Content Include="app\components\movie\controllers\movie.list.controller.js" />
     <Content Include="app\components\movie\controllers\movie.create.controller.js" />
