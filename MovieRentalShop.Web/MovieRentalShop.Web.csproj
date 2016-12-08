@@ -79,21 +79,6 @@
     <Content Include="assests\bootstrap\js\bootstrap.min.js" />
     <Content Include="assests\bootstrap\js\npm.js" />
     <Content Include="assests\css\style.css" />
-    <Content Include="assests\img\film\Anomalisa %282015%29.jpg" />
-    <Content Include="assests\img\film\Ghost in the Shell 2 Innocence %282004%29.jpg" />
-    <Content Include="assests\img\film\Howl%27s Moving Castle %282004%29.jpg" />
-    <Content Include="assests\img\film\Inception %282010%29.jpg" />
-    <Content Include="assests\img\film\Inside Out %282015%29.jpg" />
-    <Content Include="assests\img\film\It%27s Such a Beautiful Day %282012%29.jpg" />
-    <Content Include="assests\img\film\Spirited Away %282001%29.jpg" />
-    <Content Include="assests\img\film\The Dark Knight %282008%29.jpg" />
-    <Content Include="assests\img\film\The Lord of the Rings The Fellowship of the Ring %282001%29.jpg" />
-    <Content Include="assests\img\film\The Lord of the Rings The Return of the King %282003%29.jpg" />
-    <Content Include="assests\img\film\The Shawshank Redemption %281994%29.jpg" />
-    <Content Include="assests\img\film\Toy Story 3 %282010%29.jpg" />
-    <Content Include="assests\img\film\Up %282009%29.jpg" />
-    <Content Include="assests\img\film\WALL-E %282008%29.jpg" />
-    <Content Include="assests\img\film\Zootopia %282016%29.jpg" />
     <Content Include="assests\libs\angular-animate.min.js" />
     <Content Include="packages.config" />
     <Content Include="assests\bootstrap\css\bootstrap-theme.css.map" />
@@ -138,6 +123,7 @@
     <Folder Include="app\components\home\controllers\" />
     <Folder Include="app\components\home\services\" />
     <Folder Include="app\components\home\views\" />
+    <Folder Include="assests\img\" />
     <Folder Include="assests\js\" />
   </ItemGroup>
   <PropertyGroup>

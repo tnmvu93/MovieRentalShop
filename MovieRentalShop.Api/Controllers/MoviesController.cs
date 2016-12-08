@@ -25,7 +25,7 @@ namespace MovieRentalShop.Api.Controllers
         {
             var result = _queryDispatcher.Dispatch<GetListMoviesQuery, GetListMoviesQueryResponse>(new GetListMoviesQuery());
             return Ok(result);
-        }
+       } 
 
         [HttpPost]
         [Route("create")]

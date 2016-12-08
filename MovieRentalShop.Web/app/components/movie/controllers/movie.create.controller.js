@@ -21,7 +21,7 @@
                     element.bind('change', function (event) {
                         var reader = new FileReader();
                         reader.onload = scope.$parent.movieCtrl.imageIsLoaded;
-                        reader.readAsDataURL(event.target.files[0]);
+                        reader.readAsArrayBuffer(event.target.files[0]);
                     });
                 }
             }
@@ -40,7 +40,7 @@
 
                 this.imageIsLoaded = function (e) {
                     $scope.$apply(function () {
-                        self.movie.image = e.target.result;
+                        self.movie.image = new Uint8Array(e.target.result);
                     });
                 }
 

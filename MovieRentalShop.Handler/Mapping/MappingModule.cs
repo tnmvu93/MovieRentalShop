@@ -10,6 +10,7 @@ namespace MovieRentalShop.Handler.Mapping
             Mapper.Initialize(x =>
             {
                 x.AddProfile<MappingFromEntityProfile>();
+                x.AddProfile<MappingToEntityProfile>();
             });
 
             builder.Register(x => Mapper.Instance).As<IMapper>();

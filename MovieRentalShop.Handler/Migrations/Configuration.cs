@@ -14,7 +14,7 @@ namespace MovieRentalShop.Handler.Migrations
 
         protected override void Seed(MovieRentalShopContext context)
         {
-            context.Database.ExecuteSqlCommand(RenderSqlScript("sqlInitMovieDatas.sql"));
+            
         }
         
         public static string RenderSqlScript(string sqlFile)

@@ -17,6 +17,7 @@ namespace MovieRentalShop.Test.HandlerTests
             AutoMapper.Mapper.Initialize(x =>
             {
                 x.AddProfile<MappingFromEntityProfile>();
+                x.AddProfile<MappingToEntityProfile>();
             });
 
             Mapper = AutoMapper.Mapper.Instance;

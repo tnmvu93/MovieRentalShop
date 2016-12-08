@@ -63,11 +63,13 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Handlers\ICommandHandler.cs" />
     <Compile Include="Handlers\IQueryHandler.cs" />
+    <Compile Include="Handlers\Movies\CreateMovieHandler.cs" />
     <Compile Include="Handlers\Movies\GetMovieHandler.cs" />
     <Compile Include="Handlers\Movies\GetListMoviesHandler.cs" />
     <Compile Include="Handlers\Users\LoginHandler.cs" />
     <Compile Include="Mapping\MappingFromEntityProfile.cs" />
     <Compile Include="Mapping\MappingModule.cs" />
+    <Compile Include="Mapping\MappingToEntityProfile.cs" />
     <Compile Include="Migrations\201610310907495_InitializingDatabase.cs" />
     <Compile Include="Migrations\201610310907495_InitializingDatabase.Designer.cs">
       <DependentUpon>201610310907495_InitializingDatabase.cs</DependentUpon>
@@ -75,6 +77,10 @@
     <Compile Include="Migrations\201611211353519_CreateMovieDb.cs" />
     <Compile Include="Migrations\201611211353519_CreateMovieDb.Designer.cs">
       <DependentUpon>201611211353519_CreateMovieDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612070947154_AddFieldToSaveImageOfMovieDirectlyInDb.cs" />
+    <Compile Include="Migrations\201612070947154_AddFieldToSaveImageOfMovieDirectlyInDb.Designer.cs">
+      <DependentUpon>201612070947154_AddFieldToSaveImageOfMovieDirectlyInDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,17 +96,15 @@
     <EmbeddedResource Include="Migrations\201611211353519_CreateMovieDb.resx">
       <DependentUpon>201611211353519_CreateMovieDb.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612070947154_AddFieldToSaveImageOfMovieDirectlyInDb.resx">
+      <DependentUpon>201612070947154_AddFieldToSaveImageOfMovieDirectlyInDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MovieRentalShop.Share\MovieRentalShop.Share.csproj">
       <Project>{4aca3948-79c5-4616-9bbf-09954898bff2}</Project>
       <Name>MovieRentalShop.Share</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Migrations\sqlInitMovieDatas.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
