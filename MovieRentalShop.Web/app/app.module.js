@@ -5,8 +5,7 @@
     'ngAnimate',
     'ngRoute',
     'ui.bootstrap',
-    'app.movie',
-    'app.authentication'])
+    'app.movie'])
     .config(['$locationProvider', '$routeProvider',
         function ($locationProvider, $routeProvider) {
             $locationProvider.hashPrefix('!');
