@@ -3,7 +3,7 @@
 (function () {
     var app = angular.module('app');
 
-    app.directive('appMenu', function () {
+    app.directive('appMenu', ['$location', function ($location) {
         return {
             restrict: 'E',
             templateUrl: './app/shared/menu/menu.html',
@@ -12,5 +12,5 @@
             },
             controllerAs: 'menu'
         };
-    });
+    }]);
 })();
