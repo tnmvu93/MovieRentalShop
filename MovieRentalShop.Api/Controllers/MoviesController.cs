@@ -23,6 +23,7 @@ namespace MovieRentalShop.Api.Controllers
         [Route("getmovies")]
         public IHttpActionResult GetMovies()
         {
+            // Test merge branch
             var result = _queryDispatcher.Dispatch<GetListMoviesQuery, GetListMoviesQueryResponse>(new GetListMoviesQuery());
             return Ok(result);
        } 
@@ -32,7 +33,7 @@ namespace MovieRentalShop.Api.Controllers
         public IHttpActionResult CreateMovie(CreateMovieCommand command)
         {
             var result = _commandDispatcher.Dispatch<CreateMovieCommand, CreateMovieCommandResponse>(command);
-            return Ok();
+            return Ok(result);
         }
 
         [HttpGet]
