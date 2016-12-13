@@ -3,6 +3,7 @@ using MovieRentalShop.Share.CommandResponses.Movies;
 using MovieRentalShop.Share.Commands.Movies;
 using MovieRentalShop.Share.Queries.Movies;
 using MovieRentalShop.Share.QueryResponses.Movies;
+using System.Net;
 using System.Web.Http;
 
 namespace MovieRentalShop.Api.Controllers
@@ -23,10 +24,9 @@ namespace MovieRentalShop.Api.Controllers
         [Route("getmovies")]
         public IHttpActionResult GetMovies()
         {
-            // Test merge branch
             var result = _queryDispatcher.Dispatch<GetListMoviesQuery, GetListMoviesQueryResponse>(new GetListMoviesQuery());
             return Ok(result);
-       } 
+        } 
 
         [HttpPost]
         [Route("create")]
