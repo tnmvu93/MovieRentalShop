@@ -21,7 +21,7 @@
                     element.bind('change', function (event) {
                         var reader = new FileReader();
                         reader.onload = scope.$parent.movieCtrl.imageIsLoaded;
-                        reader.readAsArrayBuffer(event.target.files[0]);
+                        reader.readAsDataURL(event.target.files[0]);
                     });
                 }
             }
@@ -35,12 +35,12 @@
                 this.movie = {};
 
                 this.createMovie = function () {
-                    movieService.createMovie(angular.toJson(self.movie));
+                    movieService.createMovie(self.movie);
                 }
 
                 this.imageIsLoaded = function (e) {
                     $scope.$apply(function () {
-                        self.movie.image = new Uint8Array(e.target.result);
+                        self.movie.image = e.target.result.replace(/data:image\/jpeg;base64,/g, '');
                     });
                 }
 

@@ -7,7 +7,10 @@
             , function (apiCalling) {
 
                 this.createMovie = function (movie) {
-                    apiCalling.post('movies/create', movie);
+                    var jsonMovie = angular.toJson(movie);
+                    apiCalling.post('movies/create', jsonMovie, {
+                        'Content-Type': undefined
+                    });
                 }
 
                 

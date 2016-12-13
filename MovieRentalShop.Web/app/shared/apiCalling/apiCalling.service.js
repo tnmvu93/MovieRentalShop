@@ -15,11 +15,15 @@
             return result;
         }
 
-        this.post = function (api, data) {
-            var result = $http.post(apiServerUrl + api, data, {
+        this.post = function (api, data, header) {
+            var defaultHeader = {
                 withCredentials: true,
                 'Content-Type': 'application/json'
-            })
+            };
+
+            header = angular.extend({}, defaultHeader, header);
+
+            var result = $http.post(apiServerUrl + api, data, header);
             return result;
         }
     }]);

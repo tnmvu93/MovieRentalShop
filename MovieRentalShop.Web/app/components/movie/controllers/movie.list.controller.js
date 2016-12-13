@@ -20,11 +20,12 @@
                     this.interval = 5000;
                     this.noWrapSlides = false;
 
-                    apiCalling.get('movies/getmovies', null, function (response, status) {
-                        self.top10 = response.Movies;
-                        for (var i = 0; i < self.top10.length; i++) {
-                            self.top10[i].Index = i;
-                        }
+                    apiCalling.get('movies/getmovies')
+                        .then(function (response, status) {
+                            self.top10 = response.data.movies;
+                            for (var i = 0; i < self.top10.length; i++) {
+                                self.top10[i].index = i;
+                            }
                     });
 
                     this.goToDetail = function (movieId) {

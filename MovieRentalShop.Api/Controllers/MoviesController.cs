@@ -32,7 +32,7 @@ namespace MovieRentalShop.Api.Controllers
         public IHttpActionResult CreateMovie(CreateMovieCommand command)
         {
             var result = _commandDispatcher.Dispatch<CreateMovieCommand, CreateMovieCommandResponse>(command);
-            return Ok(result);
+            return Ok();
         }
 
         [HttpGet]
