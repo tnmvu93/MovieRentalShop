@@ -8,7 +8,7 @@ using System.Web.Http;
 
 namespace MovieRentalShop.Api.Controllers
 {
-    [RoutePrefix("movies")]
+    [RoutePrefix("api/movies")]
     public class MoviesController : ApiController
     {
         private readonly IQueryDispatcher _queryDispatcher;

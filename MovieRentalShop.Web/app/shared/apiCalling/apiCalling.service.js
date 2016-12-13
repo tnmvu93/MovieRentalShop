@@ -3,7 +3,7 @@
 (function () {
     var app = angular.module('app');
 
-    var apiServerUrl = 'http://localhost:52217/';
+    var apiServerUrl = 'http://localhost:52217/api/';
 
     app.service('apiCalling', ['$http', function ($http) {
 

@@ -1,10 +1,10 @@
 ﻿<div style="height: 50px" class="container">
     <div>
-        <img ng-src="{{movieCtrl.movie.ImageUrl}}" alt="{{movieCtrl.movie.Name}}" style="margin: auto; width: 342px; height: 500px;" class="thumbnail movie-detail-image" />
+        <img ng-src="data:image/jpeg;base64,{{movieCtrl.movie.image}}" alt="{{movieCtrl.movie.name}}" style="margin: auto; width: 342px; height: 500px;" class="thumbnail movie-detail-image" />
     </div>
     <div>
-        <b>{{movieCtrl.movie.Name}}<span> ({{movieCtrl.movie.Year}})</span></b>
-        <p><span>{{movieCtrl.movie.Imdb}}</span></p>
-        <p>{{movieCtrl.movie.Description}}</p>
+        <b>{{movieCtrl.movie.name}}<span> ({{movieCtrl.movie.year}})</span></b>
+        <p><span>{{movieCtrl.movie.imdb}}</span></p>
+        <p>{{movieCtrl.movie.description}}</p>
     </div>
 </div>

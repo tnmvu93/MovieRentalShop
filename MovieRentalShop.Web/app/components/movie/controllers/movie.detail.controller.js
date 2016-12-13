@@ -19,7 +19,7 @@
                     this.movie = {};
 
                     apiCalling
-                        .get('http://localhost:52217/movies/' + $routeParams.movieId)
+                        .get('movies/' + $routeParams.movieId)
                         .then(function (response) {
                             self.movie = response.data;
                         });
