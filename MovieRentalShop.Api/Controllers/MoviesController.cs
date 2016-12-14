@@ -45,6 +45,14 @@ namespace MovieRentalShop.Api.Controllers
                 Id = movieId
             });
             return Ok(result);
-        }        
+        }   
+        
+        [HttpPost]     
+        [Route("{movieId:int}/update")]
+        public IHttpActionResult GetMovie(UpdateMovieCommand command)
+        {
+            var result = _commandDispatcher.Dispatch<UpdateMovieCommand, UpdateMovieCommandResponse>(command);
+            return Ok(result);
+        }
     }
 }

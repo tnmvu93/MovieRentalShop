@@ -41,8 +41,10 @@
   <ItemGroup>
     <Compile Include="CommandResponses\ICommandResponse.cs" />
     <Compile Include="CommandResponses\Movies\CreateMovieCommandResponse.cs" />
+    <Compile Include="CommandResponses\Movies\UpdateMovieCommandResponse.cs" />
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="Commands\Movies\CreateMovieCommand.cs" />
+    <Compile Include="Commands\Movies\UpdateMovieCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\IQuery.cs" />
     <Compile Include="Queries\Movies\GetMovieQuery.cs" />
