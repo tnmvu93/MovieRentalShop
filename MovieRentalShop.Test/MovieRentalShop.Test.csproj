@@ -77,6 +77,7 @@
     <Compile Include="HandlerTests\Movies\CreateMovieHandlerTest.cs" />
     <Compile Include="HandlerTests\Movies\GetMovieHandlerTest.cs" />
     <Compile Include="HandlerTests\Movies\GetListMoviesHandlerTest.cs" />
+    <Compile Include="HandlerTests\Movies\UpdateMovieHandlerTest.cs" />
     <Compile Include="HandlerTests\Users\LoginHandlerTest.cs" />
     <Compile Include="Initialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

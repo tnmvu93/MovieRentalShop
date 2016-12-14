@@ -66,7 +66,7 @@
     <Compile Include="Handlers\Movies\CreateMovieHandler.cs" />
     <Compile Include="Handlers\Movies\GetMovieHandler.cs" />
     <Compile Include="Handlers\Movies\GetListMoviesHandler.cs" />
-    <Compile Include="Handlers\Movies\UpdateMovieCommandHandler.cs" />
+    <Compile Include="Handlers\Movies\UpdateMovieHandler.cs" />
     <Compile Include="Handlers\Users\LoginHandler.cs" />
     <Compile Include="Mapping\MappingFromEntityProfile.cs" />
     <Compile Include="Mapping\MappingModule.cs" />

@@ -3,7 +3,7 @@
 (function () {
     angular.module('app').config(['$routeProvider', function ($routeProvider) {
         $routeProvider
-            .when('movies/:movieId/update', {
+            .when('/movies/:movieId/update', {
                 template: '<movie-update></movie-update>'
             });
     }]);
@@ -25,6 +25,10 @@
 
                 this.updateMovie = function () {
                     movieService.createMovie(self.movie);
+                }
+
+                this.hasImage = function () {
+                    return self.movie.image != undefined || self.movie.image != null;
                 }
             }]
         });

@@ -10,6 +10,8 @@ namespace MovieRentalShop.Handler.Mapping
         protected override void Configure()
         {
             CreateMap<CreateMovieCommand, Movie>();
+            CreateMap<UpdateMovieCommand, Movie>()
+                .ForMember(d => d.Id, exp => exp.Ignore());
         }
     }
 }

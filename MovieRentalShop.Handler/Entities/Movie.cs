@@ -9,5 +9,7 @@ namespace MovieRentalShop.Handler.Entities
         public string Description { get; set; }
         public int Year { get; set; }
         public byte[] Image { get; set; }
+        public string Director { get; set; }
+        public string Star { get; set; }
     }
 }
