@@ -13,18 +13,17 @@
         .component('movieUpdate', {
             templateUrl: './app/components/movie/views/movie-update.html',
             controllerAs: 'movieCtrl',
-            controller: ['$routeParams', 'apiCalling', function ($routeParams, apiCalling) {
+            controller: ['$routeParams', 'movieService', function ($routeParams, movieService) {
                 var self = this;
                 this.movie = {};
 
-                apiCalling
-                    .get('movies/' + $routeParams.movieId)
-                    .then(function (response) {
-                        self.movie = response.data;
-                    });
+                this.movie = movieService.getMovie($routeParams.movieId)
+                                .then(function (response) {
+                                    self.movie = response.data;
+                                });
 
                 this.updateMovie = function () {
-                    movieService.createMovie(self.movie);
+                    movieService.updateMovie(self.movie);
                 }
 
                 this.hasImage = function () {

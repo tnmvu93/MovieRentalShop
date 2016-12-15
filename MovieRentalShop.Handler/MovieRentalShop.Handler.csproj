@@ -83,6 +83,10 @@
     <Compile Include="Migrations\201612070947154_AddFieldToSaveImageOfMovieDirectlyInDb.Designer.cs">
       <DependentUpon>201612070947154_AddFieldToSaveImageOfMovieDirectlyInDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612150323292_AddMoreFieldForMoviesTable.cs" />
+    <Compile Include="Migrations\201612150323292_AddMoreFieldForMoviesTable.Designer.cs">
+      <DependentUpon>201612150323292_AddMoreFieldForMoviesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612070947154_AddFieldToSaveImageOfMovieDirectlyInDb.resx">
       <DependentUpon>201612070947154_AddFieldToSaveImageOfMovieDirectlyInDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612150323292_AddMoreFieldForMoviesTable.resx">
+      <DependentUpon>201612150323292_AddMoreFieldForMoviesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
