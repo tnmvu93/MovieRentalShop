@@ -29,13 +29,16 @@
         .component('movieCreate', {
             templateUrl: './app/components/movie/views/movie-create.html',
             controllerAs: 'movieCtrl',
-            controller: ['$scope', 'movieService', function ($scope, movieService) {
+            controller: ['$location', '$scope', 'movieService', function ($location, $scope, movieService) {
                 var self = this;
 
                 this.movie = {};
 
                 this.createMovie = function () {
-                    movieService.createMovie(self.movie);
+                    movieService.createMovie(self.movie)
+                        .then(function (response) {
+                            $location.path('/movies/' + response.data.id);
+                        });
                 }
 
                 this.imageIsLoaded = function (e) {

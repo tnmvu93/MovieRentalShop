@@ -29,5 +29,19 @@ namespace MovieRentalShop.Test.HandlerTests.Movies
 
             Assert.IsNotNull(movie);
         }
+
+        [Test]
+        public void ShouldReturnMovieIdWhenMovieIsCreatedSuccessfully()
+        {
+            var command = new CreateMovieCommand { Name = "test" };
+            var handler = new CreateMovieHandler(_dbContext, Mapper);
+
+            var response = handler.Handle(command);
+
+            var movie = _dbContext.Movies.FirstOrDefault(x => x.Name == command.Name);
+
+            Assert.IsNotNull(movie);
+            Assert.AreEqual(movie.Id, response.Id);
+        }
     }
 }

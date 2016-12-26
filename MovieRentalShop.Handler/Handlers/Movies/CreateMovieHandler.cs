@@ -25,7 +25,10 @@ namespace MovieRentalShop.Handler.Handlers.Movies
             _dbContext.Movies.Add(movie);
             _dbContext.SaveChanges();
 
-            return new CreateMovieCommandResponse();
+            return new CreateMovieCommandResponse
+            {
+                Id = movie.Id
+            };
         }
     }
 }

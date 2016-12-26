@@ -13,7 +13,7 @@
 
                 this.createMovie = function (movie) {
                     var jsonMovie = angular.toJson(movie);
-                    apiCalling.post('movies/create', jsonMovie, {
+                    return apiCalling.post('movies/create', jsonMovie, {
                         'Content-Type': undefined
                     });
                 };
@@ -23,7 +23,7 @@
                     var templateApi = 'movies/{0}/update';
                     var api = templateApi.replace('{0}', movie.id);
 
-                    apiCalling.post(api, jsonMovie, {
+                    return apiCalling.post(api, jsonMovie, {
                         'Content-Type': undefined
                     });
                 };
